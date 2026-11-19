@@ -1,0 +1,25 @@
+apiVersion: flink.apache.org/v1beta1
+kind: FlinkDeployment
+metadata:
+  name: vitals-alert-job
+spec:
+  image: flink:1.19.1-java11
+  flinkVersion: v1_19
+  flinkConfiguration:
+    taskmanager.numberOfTaskSlots: "2"
+    taskmanager.network.memory.buffers-per-channel: "4"
+    state.backend.type: rocksdb
+  serviceAccount: flink
+  jobManager:
+    resource:
+      memory: "1024m"
+      cpu: 1
+  taskManager:
+    resource:
+      memory: "2048m"
+      cpu: 1
+  job:
+    jarURI: local:///opt/flink/usrlib/vitals-alert-job.jar
+    entryClass: com.example.vitals.VitalsAlertJob
+    parallelism: 2
+    upgradeMode: savepoint

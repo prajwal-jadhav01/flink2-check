@@ -1,0 +1,684 @@
+{
+ "source": "Maven Central",
+ "generatedOn": "2026-11-19",
+ "artifacts": [
+  {
+   "artifactId": "flink-connector-kafka",
+   "latestFor1x": "3.4.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.1-2.0",
+    "2.1": "5.0.0-2.1",
+    "2.2": "5.0.0-2.2"
+   },
+   "removedClassesIn2x": [
+    "org.apache.flink.connector.kafka.sink.FlinkKafkaInternalProducer",
+    "org.apache.flink.connector.kafka.sink.Recyclable",
+    "org.apache.flink.connector.kafka.sink.TransactionAborter",
+    "org.apache.flink.connector.kafka.sink.TransactionalIdFactory",
+    "org.apache.flink.connector.kafka.sink.TransactionsToAbortChecker",
+    "org.apache.flink.connector.kafka.source.enumerator.subscriber.KafkaSubscriberUtils",
+    "org.apache.flink.connector.kafka.source.reader.deserializer.KafkaDeserializationSchemaWrapper",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaErrorCode",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaException",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer",
+    "org.apache.flink.streaming.connectors.kafka.KafkaContextAware",
+    "org.apache.flink.streaming.connectors.kafka.KafkaDeserializationSchema",
+    "org.apache.flink.streaming.connectors.kafka.KafkaSerializationSchema",
+    "org.apache.flink.streaming.connectors.kafka.config.OffsetCommitMode",
+    "org.apache.flink.streaming.connectors.kafka.config.OffsetCommitModes",
+    "org.apache.flink.streaming.connectors.kafka.internals.AbstractFetcher",
+    "org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer",
+    "org.apache.flink.streaming.connectors.kafka.internals.ClosableBlockingQueue",
+    "org.apache.flink.streaming.connectors.kafka.internals.ExceptionProxy",
+    "org.apache.flink.streaming.connectors.kafka.internals.FlinkKafkaInternalProducer",
+    "org.apache.flink.streaming.connectors.kafka.internals.Handover",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaCommitCallback",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaConsumerThread",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaDeserializationSchemaWrapper",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaFetcher",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaSerializationSchemaWrapper",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaShuffleFetcher",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartition",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartitionAssigner",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartitionLeader",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartitionState",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartitionStateWithWatermarkGenerator",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicsDescriptor",
+    "org.apache.flink.streaming.connectors.kafka.internals.KeyedSerializationSchemaWrapper",
+    "org.apache.flink.streaming.connectors.kafka.internals.SourceContextWatermarkOutputAdapter",
+    "org.apache.flink.streaming.connectors.kafka.internals.TransactionalIdsGenerator",
+    "org.apache.flink.streaming.connectors.kafka.internals.metrics.KafkaConsumerMetricConstants",
+    "org.apache.flink.streaming.connectors.kafka.internals.metrics.KafkaMetricWrapper",
+    "org.apache.flink.streaming.connectors.kafka.partitioner.FlinkKafkaPartitioner",
+    "org.apache.flink.streaming.connectors.kafka.shuffle.FlinkKafkaShuffle",
+    "org.apache.flink.streaming.connectors.kafka.shuffle.FlinkKafkaShuffleConsumer",
+    "org.apache.flink.streaming.connectors.kafka.shuffle.FlinkKafkaShuffleProducer",
+    "org.apache.flink.streaming.connectors.kafka.shuffle.StreamKafkaShuffleSink",
+    "org.apache.flink.streaming.util.serialization.KeyedDeserializationSchema",
+    "org.apache.flink.streaming.util.serialization.KeyedSerializationSchema",
+    "org.apache.flink.streaming.util.serialization.TypeInformationKeyValueSerializationSchema"
+   ],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-sql-connector-kafka",
+   "latestFor1x": "3.4.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.1-2.0",
+    "2.1": "5.0.0-2.1",
+    "2.2": "5.0.0-2.2"
+   },
+   "removedClassesIn2x": [
+    "org.apache.flink.connector.kafka.sink.FlinkKafkaInternalProducer",
+    "org.apache.flink.connector.kafka.sink.Recyclable",
+    "org.apache.flink.connector.kafka.sink.TransactionAborter",
+    "org.apache.flink.connector.kafka.sink.TransactionalIdFactory",
+    "org.apache.flink.connector.kafka.sink.TransactionsToAbortChecker",
+    "org.apache.flink.connector.kafka.source.enumerator.subscriber.KafkaSubscriberUtils",
+    "org.apache.flink.connector.kafka.source.reader.deserializer.KafkaDeserializationSchemaWrapper",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.MetadataCache",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.admin.internals.MetadataOperationContext",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.DefaultBackgroundThread",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.DefaultEventHandler",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.FetcherMetricsRegistry",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.KafkaConsumerMetrics",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.NoOpConsumerRebalanceListener",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.NoopBackgroundEvent",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.PrototypeAsyncConsumer",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.events.EventHandler",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.clients.consumer.internals.events.NoopApplicationEvent",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.common.compress.KafkaLZ4BlockInputStream",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.common.compress.KafkaLZ4BlockOutputStream",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.common.compress.SnappyFactory",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.common.compress.ZstdFactory",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.common.config.internals.QuotaConfigs",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.common.network.DefaultChannelMetadataRegistry",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.common.network.Mode",
+    "org.apache.flink.kafka.shaded.org.apache.kafka.common.record.RecordConversionStats",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaErrorCode",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaException",
+    "org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer",
+    "org.apache.flink.streaming.connectors.kafka.KafkaContextAware",
+    "org.apache.flink.streaming.connectors.kafka.KafkaDeserializationSchema",
+    "org.apache.flink.streaming.connectors.kafka.KafkaSerializationSchema",
+    "org.apache.flink.streaming.connectors.kafka.config.OffsetCommitMode",
+    "org.apache.flink.streaming.connectors.kafka.config.OffsetCommitModes",
+    "org.apache.flink.streaming.connectors.kafka.internals.AbstractFetcher",
+    "org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer",
+    "org.apache.flink.streaming.connectors.kafka.internals.ClosableBlockingQueue",
+    "org.apache.flink.streaming.connectors.kafka.internals.ExceptionProxy",
+    "org.apache.flink.streaming.connectors.kafka.internals.FlinkKafkaInternalProducer",
+    "org.apache.flink.streaming.connectors.kafka.internals.Handover",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaCommitCallback",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaConsumerThread",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaDeserializationSchemaWrapper",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaFetcher",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaSerializationSchemaWrapper",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaShuffleFetcher",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartition",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartitionAssigner",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartitionLeader",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartitionState",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicPartitionStateWithWatermarkGenerator",
+    "org.apache.flink.streaming.connectors.kafka.internals.KafkaTopicsDescriptor",
+    "org.apache.flink.streaming.connectors.kafka.internals.KeyedSerializationSchemaWrapper",
+    "org.apache.flink.streaming.connectors.kafka.internals.SourceContextWatermarkOutputAdapter",
+    "org.apache.flink.streaming.connectors.kafka.internals.TransactionalIdsGenerator",
+    "org.apache.flink.streaming.connectors.kafka.internals.metrics.KafkaConsumerMetricConstants",
+    "org.apache.flink.streaming.connectors.kafka.internals.metrics.KafkaMetricWrapper",
+    "org.apache.flink.streaming.connectors.kafka.partitioner.FlinkKafkaPartitioner",
+    "org.apache.flink.streaming.connectors.kafka.shuffle.FlinkKafkaShuffle",
+    "org.apache.flink.streaming.connectors.kafka.shuffle.FlinkKafkaShuffleConsumer",
+    "org.apache.flink.streaming.connectors.kafka.shuffle.FlinkKafkaShuffleProducer",
+    "org.apache.flink.streaming.connectors.kafka.shuffle.StreamKafkaShuffleSink",
+    "org.apache.flink.streaming.util.serialization.KeyedDeserializationSchema",
+    "org.apache.flink.streaming.util.serialization.KeyedSerializationSchema",
+    "org.apache.flink.streaming.util.serialization.TypeInformationKeyValueSerializationSchema"
+   ],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-jdbc",
+   "latestFor1x": "3.4.0-1.20",
+   "flink2Releases": {},
+   "note": "Split in 4.x: use flink-connector-jdbc-core plus the database module (flink-connector-jdbc-postgres, -mysql, -oracle, ...)."
+  },
+  {
+   "artifactId": "flink-connector-jdbc-core",
+   "latestFor1x": "3.4.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.0-2.0",
+    "2.1": "4.1.0-2.1",
+    "2.2": "4.1.0-2.2"
+   },
+   "removedClassesIn2x": [
+    "org.apache.flink.connector.jdbc.core.datastream.source.reader.extractor.RowDataResultExtractor"
+   ],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-jdbc-postgres",
+   "latestFor1x": "3.4.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.0-2.0",
+    "2.1": "4.1.0-2.1",
+    "2.2": "4.1.0-2.2"
+   },
+   "removedClassesIn2x": [],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-jdbc-mysql",
+   "latestFor1x": "3.4.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.0-2.0",
+    "2.1": "4.1.0-2.1",
+    "2.2": "4.1.0-2.2"
+   },
+   "removedClassesIn2x": [],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-jdbc-oracle",
+   "latestFor1x": "3.4.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.0-2.0",
+    "2.1": "4.1.0-2.1",
+    "2.2": "4.1.0-2.2"
+   },
+   "removedClassesIn2x": [],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-elasticsearch7",
+   "latestFor1x": "3.1.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.0-2.0"
+   },
+   "removedClassesIn2x": [
+    "org.apache.flink.connector.elasticsearch.table.Elasticsearch7DynamicSinkFactory",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.Elasticsearch7Configuration",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.Elasticsearch7DynamicSink",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.Elasticsearch7DynamicSource",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.Elasticsearch7DynamicTableFactory",
+    "org.apache.flink.streaming.connectors.elasticsearch7.Elasticsearch7ApiCallBridge",
+    "org.apache.flink.streaming.connectors.elasticsearch7.Elasticsearch7BulkProcessorIndexer",
+    "org.apache.flink.streaming.connectors.elasticsearch7.ElasticsearchSink",
+    "org.apache.flink.streaming.connectors.elasticsearch7.RestClientFactory"
+   ],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-elasticsearch8",
+   "latestFor1x": "3.1.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.0-2.0"
+   },
+   "removedClassesIn2x": [],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-sql-connector-elasticsearch7",
+   "latestFor1x": "3.1.0-1.20",
+   "flink2Releases": {
+    "2.0": "4.0.0-2.0"
+   },
+   "removedClassesIn2x": [
+    "org.apache.flink.connector.elasticsearch.sink.NetworkClientConfig",
+    "org.apache.flink.connector.elasticsearch.table.Elasticsearch7DynamicSinkFactory",
+    "org.apache.flink.connector.elasticsearch.table.ElasticsearchDynamicSinkFactoryBase",
+    "org.apache.flink.streaming.connectors.elasticsearch.ActionRequestFailureHandler",
+    "org.apache.flink.streaming.connectors.elasticsearch.BufferingNoOpRequestIndexer",
+    "org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchApiCallBridge",
+    "org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkBase",
+    "org.apache.flink.streaming.connectors.elasticsearch.ElasticsearchSinkFunction",
+    "org.apache.flink.streaming.connectors.elasticsearch.RequestIndexer",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.AbstractTimeIndexGenerator",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.Elasticsearch7Configuration",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.Elasticsearch7DynamicSink",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.Elasticsearch7DynamicSource",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.Elasticsearch7DynamicTableFactory",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.ElasticsearchConfiguration",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.ElasticsearchConnectorOptions",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.ElasticsearchRowDataLookupFunction",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.ElasticsearchValidationUtils",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.IndexGenerator",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.IndexGeneratorBase",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.IndexGeneratorFactory",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.KeyExtractor",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.RequestFactory",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.RowElasticsearchSinkFunction",
+    "org.apache.flink.streaming.connectors.elasticsearch.table.StaticIndexGenerator",
+    "org.apache.flink.streaming.connectors.elasticsearch.util.ElasticsearchCommonUtils",
+    "org.apache.flink.streaming.connectors.elasticsearch.util.IgnoringFailureHandler",
+    "org.apache.flink.streaming.connectors.elasticsearch.util.NoOpFailureHandler",
+    "org.apache.flink.streaming.connectors.elasticsearch.util.RetryRejectedExecutionFailureHandler",
+    "org.apache.flink.streaming.connectors.elasticsearch7.Elasticsearch7ApiCallBridge",
+    "org.apache.flink.streaming.connectors.elasticsearch7.Elasticsearch7BulkProcessorIndexer",
+    "org.apache.flink.streaming.connectors.elasticsearch7.ElasticsearchSink",
+    "org.apache.flink.streaming.connectors.elasticsearch7.RestClientFactory"
+   ],
+   "diffedAgainst": "4.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-opensearch",
+   "latestFor1x": "1.2.0-1.19",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-opensearch2",
+   "latestFor1x": "2.0.0-1.19",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-pulsar",
+   "latestFor1x": "4.2.0-1.20",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-sql-connector-pulsar",
+   "latestFor1x": "4.2.0-1.20",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-kinesis",
+   "latestFor1x": "5.1.0-1.20",
+   "flink2Releases": {},
+   "note": "Use flink-connector-aws-kinesis-streams (KinesisStreamsSource / KinesisStreamsSink)."
+  },
+  {
+   "artifactId": "flink-connector-aws-kinesis-streams",
+   "latestFor1x": "5.1.0-1.20",
+   "flink2Releases": {
+    "2.0": "6.0.1-2.0"
+   },
+   "removedClassesIn2x": [],
+   "diffedAgainst": "6.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-aws-kinesis-firehose",
+   "latestFor1x": "5.1.0-1.20",
+   "flink2Releases": {
+    "2.0": "6.0.1-2.0"
+   },
+   "removedClassesIn2x": [],
+   "diffedAgainst": "6.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-dynamodb",
+   "latestFor1x": "5.1.0-1.20",
+   "flink2Releases": {
+    "2.0": "6.0.1-2.0"
+   },
+   "removedClassesIn2x": [],
+   "diffedAgainst": "6.0.0-2.0"
+  },
+  {
+   "artifactId": "flink-connector-rabbitmq",
+   "latestFor1x": "3.0.1-1.17",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-cassandra_2.12",
+   "latestFor1x": "3.2.0-1.19",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-hbase-2.2",
+   "latestFor1x": "4.0.0-1.19",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-mongodb",
+   "latestFor1x": "1.2.0-1.19",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-gcp-pubsub",
+   "latestFor1x": "3.1.0-1.19",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-hive_2.12",
+   "latestFor1x": "3.0.0-1.20",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-prometheus",
+   "latestFor1x": "1.0.0-1.20",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-connector-http",
+   "latestFor1x": null,
+   "flink2Releases": {
+    "2.2": "1.0.0-2.2"
+   }
+  },
+  {
+   "artifactId": "flink-connector-files",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-connector-base",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-connector-datagen",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-java",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {},
+   "note": "The DataSet API module is gone. Move batch code to flink-streaming-java (BATCH mode) or Table API."
+  },
+  {
+   "artifactId": "flink-scala_2.12",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {},
+   "note": "The Scala API is gone. Use the Java API modules."
+  },
+  {
+   "artifactId": "flink-streaming-scala_2.12",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {},
+   "note": "The Scala DataStream API is gone. Use flink-streaming-java."
+  },
+  {
+   "artifactId": "flink-streaming-java",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-clients",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-core",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-runtime",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-table-api-java",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-table-api-java-bridge",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-table-api-scala_2.12",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-table-api-scala-bridge_2.12",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-table-planner_2.12",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-table-planner-loader",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-table-runtime",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-statebackend-rocksdb",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-state-processor-api",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-cep",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-avro",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-avro-confluent-registry",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-json",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-csv",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-parquet",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-orc",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-protobuf",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-hadoop-compatibility_2.12",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {},
+   "note": "Not released for 2.x."
+  },
+  {
+   "artifactId": "flink-gelly",
+   "latestFor1x": "1.16.3",
+   "flink2Releases": {}
+  },
+  {
+   "artifactId": "flink-python",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-test-utils",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-runtime-web",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-metrics-prometheus",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  },
+  {
+   "artifactId": "flink-metrics-dropwizard",
+   "latestFor1x": "1.20.5",
+   "flink2Releases": {
+    "2.0": "2.0.2",
+    "2.1": "2.1.3",
+    "2.2": "2.2.1",
+    "2.3": "2.3.0"
+   }
+  }
+ ]
+}

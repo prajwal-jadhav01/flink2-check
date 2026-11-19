@@ -1,0 +1,9 @@
+# Legacy Flink 1.x configuration file (flat "key: value" format).
+jobmanager.rpc.address: localhost
+taskmanager.numberOfTaskSlots: 4
+taskmanager.heap.size: 2048m
+jobmanager.heap.size: 1024m
+state.backend.type: rocksdb
+state.backend.async: true
+state.checkpoints.dir: file:///tmp/flink-checkpoints
+web.port: 8081

@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+      - name: Build and test (runs real Flink 1.20 savepoints on a MiniCluster)
+        run: mvn -B package
+      - name: Scan the sample Flink 1.19 job
+        run: |
+          java -jar target/flink2-check.jar examples/legacy-job --format markdown --output report.md --fail-on never
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: flink2-check
+          path: |
+            target/flink2-check.jar
+            report.md
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: docker build -t flink2-check .
+      - run: docker run --rm -v "$PWD/examples/legacy-job:/work" flink2-check /work --fail-on never
